@@ -1,0 +1,15 @@
+What is DOM?
+Document Object Model:
+Structured representation of HTML Documents. Allows
+Javascript to access HTML elements and styles to Manipulate(change text, HTML attributes, and even CSS styles). them
+=> basically we could connection points between html document and Javascript code.
+
+DOM is automatically created by the browser as soon as the HTML page loads and it's stored in a tree structure.
+
+DOM always starts with the document object,
+document(Special object that is the entry point to the DOM) -> elements(html) -> head or body -> ....
+
+Dom is not part of Javascript it is part of web apis
+and this can interact with Javascript.
+
+
