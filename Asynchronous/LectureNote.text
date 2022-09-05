@@ -1,0 +1,42 @@
+Synchronous Code
+
+1.Most code is synchronous
+2. Synchronous code is executed line by line
+3. Each line of code waits for previous line to finish
+    => this cause problem because one line of code could take extremely long time
+
+Asynchronous Code
+Sample:
+const p = document.querySelector('.p) < call back will run after timer
+setTimeout(()=>{ <--Asynchronous code
+    p.textContewnt - '....'}, 5000);
+})
+1.Asynchronous code is exectuted after a task that run in the "backgound" finishes
+2. Asynchronous code is non-blocking
+3. Execution doesn't wait for an Asynchronous task to finish its work.
+4. Asynchronous is all about coordinating the behavior of our program over a certain period of time.
+    => not occurring at the same time
+5. set the source attribute of the image this operation is asynchronous
+5. AJAX Call
+    
+
+Call Back Function
+1) call back function alone doesn't make Asynchronous
+
+
+AJAX
+1. Asynchronous Javascript And Xml: allows us to communicate with remote web servers in an asynchronous way. 
+    => request dat from web servers dynamically
+2.How it works
+    => Clinet(browser) => Request (Asking from some data) / (Get/Post/etc) => Web Server (usually web APi)
+                       <= Response(Sending data back)
+
+API
+1. Application Programming Interface: Piece of software that can be used by another piece of software in order to allow application to talk to each other
+In other word, self-contained piece of software that allows other pieces of software to interact with them.
+
+     Online API: application running on a server, that receives requests for data, and sends data back as response.
+
+2. We can build our own web APIs or use 3rd-party APIs.
+
+
