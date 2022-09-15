@@ -1,0 +1,57 @@
+Request response model or client-server architecture
+    1. Client(browser) - requests -> web server
+    2. Web server - Response -> Client(browser)
+
+Client(browser)
+api: Https://restcountries.eu/rest/v2/alpha/PT
+
+Https://
+    => Protocol(HTTPS or HTTP)
+    => used in connection
+
+restcountries.eu
+    => Domain name
+    => not the real address of the server that we're trying to access
+    =>we need a way of kind of converting the domain name to the real address of the server
+    DNS
+        =>domain name server
+        =>browser makes a request to a DNS and this special server will then simply match the web address of the URL
+        to the server's real IP address.
+
+rest/v2/alpha/PT
+    => Resource
+
+TCP/IP socket(fundamental control system)
+    after DNS, this established between Client and web server
+    this connection is typically kept alive for the entire time that it takes to transfer all files of the website or all data
+        =>TCP is transmission Control protocol and IP is internet protocol
+        =>they are communication protocol
+        =>they define how data travels across the web
+
+TCP    
+    first the job of TCP is to break the requests and responses down into thousands of small chunks, called packets before they are sent.
+    Once the small packets arrive at their final destination, TCP will reassemble all the packets into the original request or response.
+    And this is necessary so that each packet can take a different route through the Internet because this way the message arrives at the destination
+    as quick as possible,
+IP
+    the job of the IP protocol is to actually send and route these packets through the Internet. So it ensures that they arrive
+    at the destination they should go, using IP addresses on each packet.
+    
+
+Step for request and response
+1. Client
+2. DNS
+3. Client
+4. TCP/IP socket connection between client and web servers
+5. Client -HTTP request-> web servers
+    => start line: HTTP method + request target + HTTP version
+    => HTTP request headers(many different possibilities)
+    => Request body (only when sending data to server, e.g. POST)
+6. Client <-HTTP response- web servers
+    => start line: HTTP version + status code(200, 404, and etc) + status message
+    => HTTP response headers(many different possibilities)
+    => Response body(most response)
+7. index.html is the first to be loaded
+8. scanned for assets JS,CSS, images
+9. process is repeated for each file
+
