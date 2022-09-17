@@ -1,0 +1,25 @@
+it comes with fetch.
+
+promise: An object that is used as a placeholder for the future result of an asynchronous operation.
+        => A container for an Asynchronously delivered value.
+        => A container for a future value(Response from AJAX call);
+        => we no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous results.
+        => Instead of nesting callbacks, we can chain promises for a sequence of asynchronous operations: escaping callback hell
+
+Promise life cycle
+1. Pending (before the future value is available)
+2. AsyncTask
+3. Settled(asynchronous task has finished)
+4-1. Fulfilled(Success! the value is now available)
+4-2. Rejected(An error happend);
+
+=> We are able handle these different states in our code!
+
+Build Promise => Consume Promise
+
+BuildPromise
+    => Fetch API returns promises
+
+Consume Promise
+    => When we already have a promise
+        => promise returned from fetch API.
