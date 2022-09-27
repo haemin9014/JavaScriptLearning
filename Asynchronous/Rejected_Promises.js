@@ -3,9 +3,10 @@ const request = fetch('https://restcountries.eu/rest/v2/name/portugal');
 //when we log request, it will print out Promise.
 const btn = document.querySelector('.btn-country');
 
-const renderError = function(msg) {//when we want to user to see the error
-    .insertAdjacentText('before..', msg);
-}
+const renderError = function (msg) {
+  //when we want to user to see the error
+  btn.insertAdjacentText('before..', msg);
+};
 
 const getCountry = function (country) {
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
@@ -23,8 +24,8 @@ const getCountry = function (country) {
     })
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(err => console.error(`${err}`))//when promise is rejected.
-    .finally(() => {});//always need to happen no matter promise was successful or not
+    .catch(err => console.error(`${err}`)) //when promise is rejected.
+    .finally(() => {}); //always need to happen no matter promise was successful or not
 };
 
 btn.addEventListener('click', () => getCountry('portugal'));
